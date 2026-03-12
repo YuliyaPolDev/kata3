@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import path from 'path';
 
+import { activityRouter } from './routes/activity';
 import { clustersRouter } from './routes/clusters';
 import { concernsRouter } from './routes/concerns';
 import { hrRouter } from './routes/hr';
@@ -20,6 +21,7 @@ app.get('/healthz', (_req, res) => {
 });
 
 app.use('/api/concerns', concernsRouter);
+app.use('/api/activity', activityRouter);
 app.use('/api/clusters', clustersRouter);
 app.use('/api/hr', hrRouter);
 

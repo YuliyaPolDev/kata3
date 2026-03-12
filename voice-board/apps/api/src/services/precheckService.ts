@@ -1,7 +1,6 @@
 import type { ConcernCategory, Concern } from '../models';
 
-import { readJsonFile } from '../store/jsonStore';
-import { dbPaths } from '../store/paths';
+import { listConcerns } from './concernService';
 import { findSimilarConcerns } from './duplicateService';
 import { retrievePolicyExcerpts, type PolicyExcerpt } from './policyRagService';
 import { quickSuggestCategory } from './categoryService';
@@ -14,9 +13,9 @@ export type PrecheckResult = {
 };
 
 export async function precheckConcern(title: string, description: string): Promise<PrecheckResult> {
-  const concerns = await readJsonFile<Concern[]>(dbPaths.concerns, []);
+  const concerns = await listConcerns();
 
-  const open = concerns.filter((c) => c.state !== 'Resolved');
+  const open = concerns.filter((c) => !['Resolved', 'Declined', 'Merged', 'Split'].includes(c.state));
   const resolved = concerns.filter((c) => c.state === 'Resolved');
 
   const openTopics = findSimilarConcerns(open, title, description, 5);

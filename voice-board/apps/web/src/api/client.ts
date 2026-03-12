@@ -1,5 +1,23 @@
 export type ConcernCategory = 'HR' | 'Legal' | 'Benefits' | 'Process' | 'Other';
-export type ConcernState = 'Open' | 'InDiscussion' | 'Planned' | 'Resolved';
+export type ConcernState =
+  | 'Submitted'
+  | 'Open'
+  | 'UnderReview'
+  | 'Escalated'
+  | 'InDiscussion'
+  | 'Resolved'
+  | 'Declined'
+  | 'Merged'
+  | 'Split';
+
+export type LifecycleEvent = {
+  id: string;
+  from: ConcernState;
+  to: ConcernState;
+  at: string;
+  by: { type: 'council' | 'system' };
+  note?: string;
+};
 
 export type Concern = {
   id: string;
@@ -11,6 +29,11 @@ export type Concern = {
   updatedAt: string;
   voteCount: number;
   followerCount: number;
+  lifecycle: LifecycleEvent[];
+  mergedIntoId?: string | null;
+  splitIntoIds?: string[];
+  splitFromId?: string | null;
+  declinedReason?: string | null;
   ai: {
     tone?: 'Calm' | 'Neutral' | 'Heated';
     urgency?: 'Low' | 'Medium' | 'High';
@@ -41,6 +64,18 @@ export type Cluster = {
 };
 
 export type Comment = { id: string; concernId: string; text: string; createdAt: string };
+
+export type ActivityItem = {
+  id: string;
+  concernId: string;
+  concernTitle: string;
+  category: ConcernCategory;
+  from: ConcernState;
+  to: ConcernState;
+  at: string;
+  by: { type: 'council' | 'system' };
+  note?: string;
+};
 
 async function http<T>(input: RequestInfo, init?: RequestInit): Promise<T> {
   const role = (() => {
@@ -75,8 +110,24 @@ export const api = {
   getConcern(id: string): Promise<Concern> {
     return http(`/api/concerns/${id}`);
   },
-  setConcernState(id: string, state: ConcernState): Promise<Concern> {
-    return http(`/api/concerns/${id}/state`, { method: 'PATCH', body: JSON.stringify({ state }) });
+  setConcernState(id: string, state: ConcernState, note?: string): Promise<Concern> {
+    return http(`/api/concerns/${id}/state`, { method: 'PATCH', body: JSON.stringify({ state, note }) });
+  },
+  declineConcern(id: string, reason: string): Promise<Concern> {
+    return http(`/api/concerns/${id}/decline`, { method: 'POST', body: JSON.stringify({ reason }) });
+  },
+  mergeConcern(id: string, targetId: string, note?: string): Promise<{ source: Concern; target: Concern }> {
+    return http(`/api/concerns/${id}/merge`, { method: 'POST', body: JSON.stringify({ targetId, note }) });
+  },
+  splitConcern(
+    id: string,
+    input: {
+      a: { title: string; description: string; category?: ConcernCategory };
+      b: { title: string; description: string; category?: ConcernCategory };
+      note?: string;
+    }
+  ): Promise<{ original: Concern; a: Concern; b: Concern }> {
+    return http(`/api/concerns/${id}/split`, { method: 'POST', body: JSON.stringify(input) });
   },
   findSimilar(title: string, description: string): Promise<SimilarConcern[]> {
     const qs = new URLSearchParams({ title, description });
@@ -102,5 +153,9 @@ export const api = {
   },
   askHr(question: string): Promise<{ answer: string; sources: Array<{ docTitle: string; excerpt: string }> }> {
     return http('/api/hr/ask', { method: 'POST', body: JSON.stringify({ question }) });
+  },
+  listActivity(queryString?: string): Promise<ActivityItem[]> {
+    const suffix = queryString ? `?${queryString}` : '';
+    return http(`/api/activity${suffix}`);
   }
 };
