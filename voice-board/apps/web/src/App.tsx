@@ -1,12 +1,13 @@
 import { useMemo, useState } from 'react';
 
+import { ActivityScreen } from './screens/ActivityScreen';
 import { ClustersScreen } from './screens/ClustersScreen';
 import { CouncilScreen } from './screens/CouncilScreen';
 import { FeedScreen } from './screens/FeedScreen';
 import { HrAssistantScreen } from './screens/HrAssistantScreen';
 import { SubmitScreen } from './screens/SubmitScreen';
 
-type Tab = 'Feed' | 'Submit' | 'Clusters' | 'HR' | 'Council';
+type Tab = 'Feed' | 'Submit' | 'Activity' | 'Clusters' | 'HR' | 'Council';
 type Role = 'employee' | 'council';
 
 function getInitialRole(): Role {
@@ -23,7 +24,7 @@ export function App() {
   const [tab, setTab] = useState<Tab>(role === 'council' ? 'Council' : 'Feed');
 
   const tabs = useMemo<Tab[]>(() => {
-    const base: Tab[] = ['Feed', 'Submit', 'Clusters', 'HR'];
+    const base: Tab[] = ['Feed', 'Submit', 'Activity', 'Clusters', 'HR'];
     return role === 'council' ? [...base, 'Council'] : base;
   }, [role]);
 
@@ -33,6 +34,8 @@ export function App() {
         return <FeedScreen />;
       case 'Submit':
         return <SubmitScreen onSubmitted={() => setTab('Feed')} />;
+      case 'Activity':
+        return <ActivityScreen />;
       case 'Clusters':
         return <ClustersScreen />;
       case 'HR':

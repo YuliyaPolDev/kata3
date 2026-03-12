@@ -1,5 +1,27 @@
 export type ConcernCategory = 'HR' | 'Legal' | 'Benefits' | 'Process' | 'Other';
-export type ConcernState = 'Open' | 'InDiscussion' | 'Planned' | 'Resolved';
+export type ConcernState =
+  | 'Submitted'
+  | 'Open'
+  | 'UnderReview'
+  | 'Escalated'
+  | 'InDiscussion'
+  | 'Resolved'
+  | 'Declined'
+  | 'Merged'
+  | 'Split';
+
+export type LifecycleActor = {
+  type: 'council' | 'system';
+};
+
+export type LifecycleEvent = {
+  id: string;
+  from: ConcernState;
+  to: ConcernState;
+  at: string;
+  by: LifecycleActor;
+  note?: string;
+};
 
 export type Concern = {
   id: string;
@@ -11,6 +33,11 @@ export type Concern = {
   updatedAt: string;
   voteCount: number;
   followerCount: number;
+  lifecycle: LifecycleEvent[];
+  mergedIntoId?: string | null;
+  splitIntoIds?: string[];
+  splitFromId?: string | null;
+  declinedReason?: string | null;
   ai: {
     tone?: 'Calm' | 'Neutral' | 'Heated';
     urgency?: 'Low' | 'Medium' | 'High';

@@ -1,5 +1,455 @@
 [
   {
+    "id": "dU02o3Yck0XaLLVZjK8h2",
+    "title": "I need coffee",
+    "description": "I need coffee",
+    "category": "Other",
+    "state": "Open",
+    "createdAt": "2026-03-12T09:16:11.432Z",
+    "updatedAt": "2026-03-12T09:16:11.432Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "PE0EVI0qiQmehoV77_L0t",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Created from split of U4NI7FkCsAx9c9Uis3Ceo",
+        "at": "2026-03-12T09:16:11.432Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": "U4NI7FkCsAx9c9Uis3Ceo",
+    "declinedReason": null,
+    "ai": {
+      "duplicateOfId": null,
+      "similarIds": [],
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "YDGkWPJGTGZwbGrSJ0cAH",
+    "title": "now URGENT",
+    "description": "now URGENT",
+    "category": "Other",
+    "state": "Open",
+    "createdAt": "2026-03-12T09:16:11.432Z",
+    "updatedAt": "2026-03-12T09:16:11.432Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "7hiqnZyhjLqSvxZCzgXHO",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Created from split of U4NI7FkCsAx9c9Uis3Ceo",
+        "at": "2026-03-12T09:16:11.432Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": "U4NI7FkCsAx9c9Uis3Ceo",
+    "declinedReason": null,
+    "ai": {
+      "duplicateOfId": null,
+      "similarIds": [],
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "6OO1YMqEsDS8Fll3V5Bih",
+    "title": "Parking capacity",
+    "description": "Not enough parking capacity at peak hours.",
+    "category": "Other",
+    "state": "UnderReview",
+    "createdAt": "2026-03-12T09:06:41.663Z",
+    "updatedAt": "2026-03-12T09:10:52.466Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "4PfikkKadFOCGGvYoWfxM",
+        "from": "Open",
+        "to": "UnderReview",
+        "by": {
+          "type": "council"
+        },
+        "note": "under review",
+        "at": "2026-03-12T09:10:52.466Z"
+      },
+      {
+        "id": "peFiVuT_pE4Ph3fppoMYO",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Created from split of 3yXOF2MBSa2DXkLr-JK3Y",
+        "at": "2026-03-12T09:06:41.663Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": "3yXOF2MBSa2DXkLr-JK3Y",
+    "declinedReason": null,
+    "ai": {
+      "duplicateOfId": null,
+      "similarIds": [],
+      "priorityScore": 32
+    }
+  },
+  {
+    "id": "SrKZvaV9i7zcDJ6YYOkvC",
+    "title": "Parking enforcement",
+    "description": "Enforcement and permits seem inconsistent.",
+    "category": "Other",
+    "state": "Merged",
+    "createdAt": "2026-03-12T09:06:41.663Z",
+    "updatedAt": "2026-03-12T09:08:33.035Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "UmpKYT_RwcUCW9K7nOQQ_",
+        "from": "Declined",
+        "to": "Merged",
+        "by": {
+          "type": "council"
+        },
+        "at": "2026-03-12T09:08:33.035Z"
+      },
+      {
+        "id": "20xSVn_fOeJZHUropG3A3",
+        "from": "Open",
+        "to": "Declined",
+        "by": {
+          "type": "council"
+        },
+        "note": "Not actionable; requires individual facilities ticket.",
+        "at": "2026-03-12T09:06:41.676Z"
+      },
+      {
+        "id": "mwACTjGWHcc3w30bYVNPE",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Created from split of 3yXOF2MBSa2DXkLr-JK3Y",
+        "at": "2026-03-12T09:06:41.663Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": "3yXOF2MBSa2DXkLr-JK3Y",
+    "declinedReason": "Not actionable; requires individual facilities ticket.",
+    "ai": {
+      "duplicateOfId": null,
+      "similarIds": [],
+      "priorityScore": 32
+    }
+  },
+  {
+    "id": "Gueo2d5VtREno0fd3tmBj",
+    "title": "Cafeteria hours",
+    "description": "Cafeteria closes too early for late shifts. Consider extending hours.",
+    "category": "Other",
+    "state": "Merged",
+    "createdAt": "2026-03-12T09:06:41.199Z",
+    "updatedAt": "2026-03-12T09:06:41.669Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "ZZaT9s_qVgU_-zPXlG6DE",
+        "from": "Open",
+        "to": "Merged",
+        "by": {
+          "type": "council"
+        },
+        "note": "Same theme; consolidating.\nMerged into \"Parking capacity\" (6OO1YMqEsDS8Fll3V5Bih). Moved 0 vote record(s).",
+        "at": "2026-03-12T09:06:41.669Z"
+      },
+      {
+        "id": "nl4wbvF7R8rcIvMxr6n_S",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Auto-opened for voting",
+        "at": "2026-03-12T09:06:41.199Z"
+      }
+    ],
+    "mergedIntoId": "6OO1YMqEsDS8Fll3V5Bih",
+    "splitFromId": null,
+    "declinedReason": null,
+    "ai": {
+      "similarIds": [
+        "gC0GhibxbB6XyL87pZvmZ",
+        "_eJUlsG5TVKbsCKJQWdth",
+        "3yXOF2MBSa2DXkLr-JK3Y",
+        "MiBgs84B32zW8G-NNr1s7",
+        "-9Tz0H99VxRl-dp_d7VCg"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "3yXOF2MBSa2DXkLr-JK3Y",
+    "title": "Parking issue",
+    "description": "Parking spots are insufficient during peak hours. Please address.",
+    "category": "Other",
+    "state": "Split",
+    "createdAt": "2026-03-12T09:06:40.643Z",
+    "updatedAt": "2026-03-12T09:06:41.663Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "4Wq8grsdx68I4MLK5N1-p",
+        "from": "UnderReview",
+        "to": "Split",
+        "by": {
+          "type": "council"
+        },
+        "note": "Split into capacity vs enforcement.\nSplit into 6OO1YMqEsDS8Fll3V5Bih and SrKZvaV9i7zcDJ6YYOkvC. Redistributed 2 vote record(s) (1/1).",
+        "at": "2026-03-12T09:06:41.663Z"
+      },
+      {
+        "id": "1dDT8Nt4YyEP4UOrrxyAO",
+        "from": "Open",
+        "to": "UnderReview",
+        "by": {
+          "type": "council"
+        },
+        "note": "Received multiple reports; reviewing options.",
+        "at": "2026-03-12T09:06:41.659Z"
+      },
+      {
+        "id": "Jx0paehpiJIzoDw53moC9",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Auto-opened for voting",
+        "at": "2026-03-12T09:06:40.643Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null,
+    "ai": {
+      "similarIds": [
+        "-9Tz0H99VxRl-dp_d7VCg",
+        "MiBgs84B32zW8G-NNr1s7",
+        "1FvJiEeOD-z9Mvbyc_agn",
+        "xI5_X4zCpEb9jIqW8S9YY",
+        "gC0GhibxbB6XyL87pZvmZ"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    },
+    "splitIntoIds": [
+      "6OO1YMqEsDS8Fll3V5Bih",
+      "SrKZvaV9i7zcDJ6YYOkvC"
+    ]
+  },
+  {
+    "id": "MiBgs84B32zW8G-NNr1s7",
+    "title": "Parking capacity",
+    "description": "Not enough parking capacity at peak hours.",
+    "category": "Other",
+    "state": "Merged",
+    "createdAt": "2026-03-12T09:06:29.678Z",
+    "updatedAt": "2026-03-12T09:14:37.079Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "bWALyuRWdFvmZF2NUhC7a",
+        "from": "Open",
+        "to": "Merged",
+        "by": {
+          "type": "council"
+        },
+        "note": "Merged into \"Parking issue\" (-9Tz0H99VxRl-dp_d7VCg). Moved 1 vote record(s).",
+        "at": "2026-03-12T09:14:37.079Z"
+      },
+      {
+        "id": "j-xXKrAO3k8ICGXooNNwC",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Created from split of -9Tz0H99VxRl-dp_d7VCg",
+        "at": "2026-03-12T09:06:29.678Z"
+      }
+    ],
+    "mergedIntoId": "-9Tz0H99VxRl-dp_d7VCg",
+    "splitFromId": "-9Tz0H99VxRl-dp_d7VCg",
+    "declinedReason": null,
+    "ai": {
+      "duplicateOfId": null,
+      "similarIds": [],
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "1FvJiEeOD-z9Mvbyc_agn",
+    "title": "Parking enforcement",
+    "description": "Enforcement and permits seem inconsistent.",
+    "category": "Other",
+    "state": "Declined",
+    "createdAt": "2026-03-12T09:06:29.678Z",
+    "updatedAt": "2026-03-12T09:06:29.864Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "UZXJVHqWvNR8l_DGgOavq",
+        "from": "Open",
+        "to": "Declined",
+        "by": {
+          "type": "council"
+        },
+        "note": "Not actionable; requires individual facilities ticket.",
+        "at": "2026-03-12T09:06:29.864Z"
+      },
+      {
+        "id": "lK_yv9rMVyWImyXS-5Mgl",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Created from split of -9Tz0H99VxRl-dp_d7VCg",
+        "at": "2026-03-12T09:06:29.678Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": "-9Tz0H99VxRl-dp_d7VCg",
+    "declinedReason": "Not actionable; requires individual facilities ticket.",
+    "ai": {
+      "duplicateOfId": null,
+      "similarIds": [],
+      "priorityScore": 32
+    }
+  },
+  {
+    "id": "gC0GhibxbB6XyL87pZvmZ",
+    "title": "Cafeteria hours",
+    "description": "Cafeteria closes too early for late shifts. Consider extending hours.",
+    "category": "Other",
+    "state": "Merged",
+    "createdAt": "2026-03-12T09:06:29.019Z",
+    "updatedAt": "2026-03-12T09:06:29.726Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "ftrFXpZwyQ59oUhxLLVfQ",
+        "from": "Open",
+        "to": "Merged",
+        "by": {
+          "type": "council"
+        },
+        "note": "Same theme; consolidating.\nMerged into \"Parking capacity\" (MiBgs84B32zW8G-NNr1s7). Moved 0 vote record(s).",
+        "at": "2026-03-12T09:06:29.726Z"
+      },
+      {
+        "id": "G43VNZ2ZUoQvfl8hH9vSi",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Auto-opened for voting",
+        "at": "2026-03-12T09:06:29.019Z"
+      }
+    ],
+    "mergedIntoId": "MiBgs84B32zW8G-NNr1s7",
+    "splitFromId": null,
+    "declinedReason": null,
+    "ai": {
+      "similarIds": [
+        "_eJUlsG5TVKbsCKJQWdth",
+        "-9Tz0H99VxRl-dp_d7VCg",
+        "Of8E2yC6yEsgn-fjjuiY1",
+        "rbtEdJq7Dpld2auS8F2hM"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "-9Tz0H99VxRl-dp_d7VCg",
+    "title": "Parking issue",
+    "description": "Parking spots are insufficient during peak hours. Please address.",
+    "category": "Other",
+    "state": "Split",
+    "createdAt": "2026-03-12T09:06:28.312Z",
+    "updatedAt": "2026-03-12T09:14:37.079Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "6fLzRXjEqIHwM_DngDSOT",
+        "from": "UnderReview",
+        "to": "Split",
+        "by": {
+          "type": "council"
+        },
+        "note": "Split into capacity vs enforcement.\nSplit into MiBgs84B32zW8G-NNr1s7 and 1FvJiEeOD-z9Mvbyc_agn. Redistributed 2 vote record(s) (1/1).",
+        "at": "2026-03-12T09:06:29.678Z"
+      },
+      {
+        "id": "VIw6Qt9Aj8Ug7MO1wh1V8",
+        "from": "Open",
+        "to": "UnderReview",
+        "by": {
+          "type": "council"
+        },
+        "note": "Received multiple reports; reviewing options.",
+        "at": "2026-03-12T09:06:29.626Z"
+      },
+      {
+        "id": "kWWwwSb0VQvnc4Y-C_L-X",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Auto-opened for voting",
+        "at": "2026-03-12T09:06:28.312Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null,
+    "ai": {
+      "similarIds": [
+        "xI5_X4zCpEb9jIqW8S9YY",
+        "v89wheCbjFHDTHkD7tAHC",
+        "CRn71RSfl92Nhh72Rrvoy",
+        "8ncBf-uTrtMr8Bq3xfFDU",
+        "0S1G2ip1gs0Y4jnMtenDY"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 32
+    },
+    "splitIntoIds": [
+      "MiBgs84B32zW8G-NNr1s7",
+      "1FvJiEeOD-z9Mvbyc_agn"
+    ]
+  },
+  {
     "id": "v89wheCbjFHDTHkD7tAHC",
     "title": "Overtime policy clarity",
     "description": "I am confused about overtime eligibility and approval steps. Please clarify.",
@@ -17,14 +467,29 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 32
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "aQv7FBN7hlvPvK_kBCYT0",
+        "from": "Submitted",
+        "to": "Resolved",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:54:02.017Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "CRn71RSfl92Nhh72Rrvoy",
     "title": "Overtime policy clarity",
     "description": "I am confused about overtime eligibility and approval steps. Please clarify.",
     "category": "Process",
-    "state": "Planned",
+    "state": "UnderReview",
     "createdAt": "2026-03-12T08:53:52.584Z",
     "updatedAt": "2026-03-12T08:55:28.022Z",
     "voteCount": 1,
@@ -36,7 +501,22 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 32
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "d6Zaz9Ad4JogUDJwJazWZ",
+        "from": "Submitted",
+        "to": "UnderReview",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:53:52.584Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "_eJUlsG5TVKbsCKJQWdth",
@@ -55,16 +535,31 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "vwb9WU2ZX8ZEYsJ_k2gGH",
+        "from": "Submitted",
+        "to": "Resolved",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:44:49.079Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "U4NI7FkCsAx9c9Uis3Ceo",
     "title": "I need coffee now URGENT",
     "description": "I need coffee now URGENT",
     "category": "Other",
-    "state": "Open",
+    "state": "Split",
     "createdAt": "2026-03-12T08:44:14.093Z",
-    "updatedAt": "2026-03-12T08:44:14.093Z",
+    "updatedAt": "2026-03-12T09:16:11.432Z",
     "voteCount": 0,
     "followerCount": 0,
     "ai": {
@@ -77,7 +572,36 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "QA8KC_SCjE55Ti-bjQXrO",
+        "from": "Open",
+        "to": "Split",
+        "by": {
+          "type": "council"
+        },
+        "note": "Split into dU02o3Yck0XaLLVZjK8h2 and YDGkWPJGTGZwbGrSJ0cAH. Redistributed 0 vote record(s) (0/0).",
+        "at": "2026-03-12T09:16:11.432Z"
+      },
+      {
+        "id": "qCBOstLgUXgiR3V82jBN9",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:44:14.093Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null,
+    "splitIntoIds": [
+      "dU02o3Yck0XaLLVZjK8h2",
+      "YDGkWPJGTGZwbGrSJ0cAH"
+    ]
   },
   {
     "id": "8ncBf-uTrtMr8Bq3xfFDU",
@@ -97,7 +621,22 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "hfw30Gu-vB1ZzGzDLJpbA",
+        "from": "Submitted",
+        "to": "Resolved",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:27:59.627Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "0S1G2ip1gs0Y4jnMtenDY",
@@ -116,7 +655,22 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "qt_LCMehQNbbN3pHkn-2r",
+        "from": "Submitted",
+        "to": "Resolved",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:27:51.354Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "gxzhBKODerPLh0GzVaPXq",
@@ -137,7 +691,22 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "edSQvgd4j1RHiu5aMqh3W",
+        "from": "Submitted",
+        "to": "Resolved",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:12:56.235Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "xh5UbtiGM4qR0060UHGMN",
@@ -157,7 +726,22 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "n_b8LCi6hXQaMqG9vkSR4",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:12:36.839Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "Rmf0eFbvKtSMwlu9Ca44g",
@@ -176,7 +760,22 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "zzzpr2wRRrnewXhtUaD0T",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:12:26.761Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "xI5_X4zCpEb9jIqW8S9YY",
@@ -194,7 +793,22 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "FJC7bOG4cJMotw2LfmbOh",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:12:11.065Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "P4ytyI3a2-HbI2IDlRCSa",
@@ -210,7 +824,22 @@
       "similarIds": [],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "MxhyoEx4t71FDt97cfm7K",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:11:58.948Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "lrTrDhptITEPYMZCpu5yY",
@@ -226,7 +855,22 @@
       "similarIds": [],
       "duplicateOfId": null,
       "priorityScore": 30
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "xktdDzbrhanE-gZ64lTHI",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:11:19.246Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "Of8E2yC6yEsgn-fjjuiY1",
@@ -244,7 +888,22 @@
       ],
       "duplicateOfId": null,
       "priorityScore": 32
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "tK7JWWzUVZrwEqlXsIFg2",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:09:02.276Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   },
   {
     "id": "rbtEdJq7Dpld2auS8F2hM",
@@ -260,6 +919,21 @@
       "similarIds": [],
       "duplicateOfId": null,
       "priorityScore": 32
-    }
+    },
+    "lifecycle": [
+      {
+        "id": "haYQLDhMP6OdbhMVz2j1i",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Imported existing topic",
+        "at": "2026-03-12T08:08:50.489Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null
   }
 ]

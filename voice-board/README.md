@@ -18,7 +18,8 @@ This is intentionally **not** production architecture (no auth/SSO, no notificat
 - Submit a concern (title/description/category)
 - Live duplicate detection (simple cosine similarity over tokens)
 - Upvote + comment
-- Simple lifecycle state (Open → InDiscussion → Planned → Resolved)
+- Topic lifecycle + outcomes (Submitted/Open/UnderReview/Escalated/InDiscussion/Resolved + Declined/Merged/Split)
+- Activity feed (status changes + outcomes; filterable)
 - Trending cluster creation (5+ similar concerns in 30 days)
 - HR Assistant (RAG): keyword retrieval over local policy markdown + optional LLM answer
 
