@@ -4,6 +4,7 @@ import express from 'express';
 import path from 'path';
 
 import { activityRouter } from './routes/activity';
+import { councilRouter } from './routes/council';
 import { clustersRouter } from './routes/clusters';
 import { concernsRouter } from './routes/concerns';
 import { hrRouter } from './routes/hr';
@@ -24,6 +25,7 @@ app.use('/api/concerns', concernsRouter);
 app.use('/api/activity', activityRouter);
 app.use('/api/clusters', clustersRouter);
 app.use('/api/hr', hrRouter);
+app.use('/api/council', councilRouter);
 
 const port = Number(process.env.PORT ?? 3001);
 app.listen(port, () => {

@@ -32,6 +32,10 @@ export function CouncilScreen() {
   const [error, setError] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [updating, setUpdating] = useState(false);
+  const [agendaText, setAgendaText] = useState<string | null>(null);
+  const [buildingAgenda, setBuildingAgenda] = useState(false);
+  const [resolutionDraft, setResolutionDraft] = useState<string | null>(null);
+  const [draftingResolution, setDraftingResolution] = useState(false);
   const [nextState, setNextState] = useState<ConcernState>('Open');
   const [note, setNote] = useState('');
   const [declineReason, setDeclineReason] = useState('');
@@ -77,6 +81,7 @@ export function CouncilScreen() {
     setSplitADescription('');
     setSplitBTitle('');
     setSplitBDescription('');
+    setResolutionDraft(null);
   }, [selectedId]);
 
   if (loading) return <div>Loading…</div>;
@@ -164,6 +169,70 @@ export function CouncilScreen() {
                   <strong>Sentiment:</strong>{' '}
                   {typeof selected.ai?.sentiment === 'number' ? selected.ai.sentiment.toFixed(2) : '—'}
                 </div>
+              </div>
+            </div>
+
+            <div style={{ marginTop: 12, border: '1px solid #ddd', borderRadius: 8, padding: 12, background: 'white' }}>
+              <strong>AI tools (council-only)</strong>
+              <div style={{ marginTop: 10, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                <button
+                  disabled={buildingAgenda}
+                  onClick={async () => {
+                    setBuildingAgenda(true);
+                    setError(null);
+                    try {
+                      const r = await api.buildAgenda();
+                      setAgendaText(r.agenda);
+                    } catch (err) {
+                      setError(err instanceof Error ? err.message : 'Failed to build agenda');
+                    } finally {
+                      setBuildingAgenda(false);
+                    }
+                  }}
+                >
+                  Build agenda
+                </button>
+                <button
+                  disabled={draftingResolution}
+                  onClick={async () => {
+                    setDraftingResolution(true);
+                    setError(null);
+                    try {
+                      const r = await api.draftResolution(selected.id, note.trim() || undefined);
+                      setResolutionDraft(r.draft);
+                    } catch (err) {
+                      setError(err instanceof Error ? err.message : 'Failed to draft resolution');
+                    } finally {
+                      setDraftingResolution(false);
+                    }
+                  }}
+                >
+                  Draft resolution update
+                </button>
+                {buildingAgenda ? <span style={{ color: '#555' }}>Building agenda…</span> : null}
+                {draftingResolution ? <span style={{ color: '#555' }}>Drafting…</span> : null}
+              </div>
+
+              <div style={{ marginTop: 10 }}>
+                <div style={{ fontSize: 12, color: '#666', marginBottom: 4 }}>Agenda</div>
+                {agendaText ? (
+                  <div style={{ border: '1px solid #eee', borderRadius: 8, padding: 10, whiteSpace: 'pre-wrap', background: '#fafafa' }}>
+                    {agendaText}
+                  </div>
+                ) : (
+                  <div style={{ color: '#555', fontSize: 13 }}>No agenda generated.</div>
+                )}
+              </div>
+
+              <div style={{ marginTop: 10 }}>
+                <div style={{ fontSize: 12, color: '#666', marginBottom: 4 }}>Resolution draft</div>
+                {resolutionDraft ? (
+                  <div style={{ border: '1px solid #eee', borderRadius: 8, padding: 10, whiteSpace: 'pre-wrap', background: '#fafafa' }}>
+                    {resolutionDraft}
+                  </div>
+                ) : (
+                  <div style={{ color: '#555', fontSize: 13 }}>No draft generated.</div>
+                )}
               </div>
             </div>
 

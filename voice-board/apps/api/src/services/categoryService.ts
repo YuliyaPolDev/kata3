@@ -1,5 +1,6 @@
 import type { ConcernCategory } from '../models';
 import { generateText } from '../ai/llm';
+import { promptSuggestCategory } from '../ai/prompts';
 
 const categories: ConcernCategory[] = ['HR', 'Legal', 'Benefits', 'Process', 'Other'];
 
@@ -18,14 +19,7 @@ export async function suggestCategory(title: string, description: string): Promi
   const input = `${title}\n${description}`.trim();
   if (!input) return 'Other';
 
-  const prompt = [
-    'You classify employee concerns into exactly one category.',
-    `Valid categories: ${categories.join(', ')}.`,
-    'Return ONLY the category name (no punctuation).',
-    '',
-    `Title: ${title}`,
-    `Description: ${description}`
-  ].join('\n');
+  const prompt = promptSuggestCategory({ title, description, categories });
 
   const text = await generateText(prompt);
   const cleaned = (text ?? '').trim();

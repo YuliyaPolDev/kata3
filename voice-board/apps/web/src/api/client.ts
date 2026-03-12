@@ -44,13 +44,14 @@ export type Concern = {
   };
 };
 
-export type SimilarConcern = { id: string; title: string; score: number; state: ConcernState };
+export type SimilarConcern = { id: string; title: string; score: number; state: ConcernState; reason?: string };
 export type PolicyExcerpt = { docTitle: string; excerpt: string; score: number };
 export type PrecheckResult = {
   openTopics: SimilarConcern[];
   resolvedTopics: SimilarConcern[];
   policyExcerpts: PolicyExcerpt[];
   suggestedCategory: ConcernCategory;
+  suggestedAnswer?: string;
 };
 export type Cluster = {
   id: string;
@@ -76,6 +77,9 @@ export type ActivityItem = {
   by: { type: 'council' | 'system' };
   note?: string;
 };
+
+export type AgendaResult = { agenda: string | null };
+export type ResolutionDraftResult = { draft: string | null };
 
 async function http<T>(input: RequestInfo, init?: RequestInit): Promise<T> {
   const role = (() => {
@@ -157,5 +161,14 @@ export const api = {
   listActivity(queryString?: string): Promise<ActivityItem[]> {
     const suffix = queryString ? `?${queryString}` : '';
     return http(`/api/activity${suffix}`);
+  },
+  buildAgenda(): Promise<AgendaResult> {
+    return http('/api/council/agenda', { method: 'POST', body: '{}' });
+  },
+  draftResolution(id: string, decisionNotes?: string): Promise<ResolutionDraftResult> {
+    return http(`/api/council/concerns/${id}/resolution-draft`, {
+      method: 'POST',
+      body: JSON.stringify({ decisionNotes })
+    });
   }
 };

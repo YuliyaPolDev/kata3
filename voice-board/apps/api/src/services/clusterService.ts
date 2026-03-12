@@ -5,6 +5,7 @@ import { cosineSimilarity } from '../ai/similarity';
 import { readJsonFile, writeJsonFile } from '../store/jsonStore';
 import { dbPaths } from '../store/paths';
 import { generateText } from '../ai/llm';
+import { promptClusterThemes, promptClusterTitle } from '../ai/prompts';
 
 function isWithinDays(iso: string, days: number): boolean {
   const t = new Date(iso).getTime();
@@ -60,21 +61,17 @@ export async function updateTrendingClustersForConcern(concern: Concern): Promis
     return;
   }
 
-  const title = await generateText(
-    `Create a short title (max 8 words) for a trending employee concern cluster.\n\n${concern.title}\n${concern.description}`
-  );
+  const title = await generateText(promptClusterTitle({ exampleTitle: concern.title, exampleDescription: concern.description }));
 
-  const themesText = await generateText(
-    'Summarize 3-5 common themes as short bullet points (no numbering) for these concerns:\n\n' +
-      unique
-        .slice(0, 8)
-        .map((id) => {
-          const c = concerns.find((x) => x.id === id);
-          return c ? `- ${c.title}: ${c.description}` : '';
-        })
-        .filter(Boolean)
-        .join('\n')
-  );
+  const themeInput = unique
+    .slice(0, 8)
+    .map((id) => {
+      const c = concerns.find((x) => x.id === id);
+      return c ? { title: c.title, description: c.description } : null;
+    })
+    .filter((x): x is { title: string; description: string } => Boolean(x));
+
+  const themesText = await generateText(promptClusterThemes(themeInput));
 
   const themes = (themesText ?? '')
     .split(/\n+/)

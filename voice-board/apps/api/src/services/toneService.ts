@@ -1,5 +1,6 @@
 import type { Concern } from '../models';
 import { generateText } from '../ai/llm';
+import { promptClassifyToneUrgencySentiment } from '../ai/prompts';
 
 export type ConcernClassification = {
   tone: 'Calm' | 'Neutral' | 'Heated';
@@ -8,13 +9,7 @@ export type ConcernClassification = {
 };
 
 export async function classifyConcern(concern: Concern): Promise<ConcernClassification | null> {
-  const prompt = [
-    'Classify the following employee concern.',
-    'Return ONLY valid JSON with keys: tone (Calm|Neutral|Heated), urgency (Low|Medium|High), sentiment (-1..1).',
-    '',
-    `Title: ${concern.title}`,
-    `Description: ${concern.description}`
-  ].join('\n');
+  const prompt = promptClassifyToneUrgencySentiment(concern);
 
   const text = await generateText(prompt);
   if (!text) return null;

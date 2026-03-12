@@ -101,6 +101,16 @@ export function SubmitScreen(props: { onSubmitted: () => void }) {
           Checks resolved topics, HR policies, and open duplicates in real-time.
         </div>
 
+        <Section title="Suggested answer (AI)">
+          {precheck?.suggestedAnswer ? (
+            <div style={{ border: '1px solid #ddd', borderRadius: 8, padding: 10, whiteSpace: 'pre-wrap' }}>
+              {precheck.suggestedAnswer}
+            </div>
+          ) : (
+            <Empty text="No suggested answer available." />
+          )}
+        </Section>
+
         <Section title="Resolved topics">
           {precheck?.resolvedTopics?.length ? (
             precheck.resolvedTopics.map((s) => (
@@ -130,7 +140,12 @@ export function SubmitScreen(props: { onSubmitted: () => void }) {
         <Section title="Open topics (duplicates)">
           {precheck?.openTopics?.length ? (
             precheck.openTopics.map((s) => (
-              <Item key={s.id} title={s.title} right={`${Math.round(s.score * 100)}%`} subtitle={s.state} />
+              <Item
+                key={s.id}
+                title={s.title}
+                right={`${Math.round(s.score * 100)}%`}
+                subtitle={s.reason ? `${s.state} · ${s.reason}` : s.state}
+              />
             ))
           ) : (
             <Empty text="No similar open topics found." />

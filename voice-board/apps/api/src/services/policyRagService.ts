@@ -4,6 +4,7 @@ import path from 'path';
 import type { PolicyAnswer } from '../models';
 import { dataPoliciesDir } from '../store/paths';
 import { generateText } from '../ai/llm';
+import { promptHrAnswer } from '../ai/prompts';
 
 type PolicyDoc = { id: string; title: string; file: string };
 
@@ -59,19 +60,7 @@ export async function retrievePolicyExcerpts(query: string, limit = 3): Promise<
 export async function answerHrQuestion(question: string): Promise<PolicyAnswer> {
   const top = await retrievePolicyExcerpts(question, 5);
   const sources = top.map((t) => ({ docTitle: t.docTitle, excerpt: t.excerpt }));
-  const context = top.map((t, idx) => `SOURCE ${idx + 1} (${t.docTitle}):\n${t.excerpt}`).join('\n\n');
-
-  const prompt = [
-    'You are an HR assistant. Answer using ONLY the provided SOURCES.',
-    'If the answer is not in the sources, say: "Not found in the provided policies."',
-    '',
-    context,
-    '',
-    `Question: ${question}`,
-    'Answer:'
-  ].join('\n');
-
-  const llmAnswer = await generateText(prompt);
+  const llmAnswer = await generateText(promptHrAnswer(question, sources));
 
   return {
     answer: llmAnswer ?? 'LLM not configured. Here are the most relevant policy excerpts.',
