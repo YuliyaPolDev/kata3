@@ -1,1 +1,146 @@
-[]
+[
+  {
+    "id": "gxzhBKODerPLh0GzVaPXq",
+    "title": "no coffee at the office",
+    "description": "no coffee at the office",
+    "category": "HR",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:12:56.235Z",
+    "updatedAt": "2026-03-12T08:12:56.235Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "xh5UbtiGM4qR0060UHGMN",
+        "P4ytyI3a2-HbI2IDlRCSa",
+        "Rmf0eFbvKtSMwlu9Ca44g",
+        "xI5_X4zCpEb9jIqW8S9YY"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "xh5UbtiGM4qR0060UHGMN",
+    "title": "coffee machine problems at the office",
+    "description": "coffee machine problems at the office",
+    "category": "HR",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:12:36.839Z",
+    "updatedAt": "2026-03-12T08:12:36.839Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "Rmf0eFbvKtSMwlu9Ca44g",
+        "P4ytyI3a2-HbI2IDlRCSa",
+        "xI5_X4zCpEb9jIqW8S9YY"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "Rmf0eFbvKtSMwlu9Ca44g",
+    "title": "coffee machine problems",
+    "description": "coffee machine problems",
+    "category": "HR",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:12:26.761Z",
+    "updatedAt": "2026-03-12T08:12:26.761Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "P4ytyI3a2-HbI2IDlRCSa",
+        "xI5_X4zCpEb9jIqW8S9YY"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "xI5_X4zCpEb9jIqW8S9YY",
+    "title": "coffee machine issue",
+    "description": "coffee machine issue",
+    "category": "HR",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:12:11.065Z",
+    "updatedAt": "2026-03-12T08:12:11.065Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "P4ytyI3a2-HbI2IDlRCSa"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "P4ytyI3a2-HbI2IDlRCSa",
+    "title": "coffee machine",
+    "description": "coffee machine broken",
+    "category": "HR",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:11:58.948Z",
+    "updatedAt": "2026-03-12T08:11:58.948Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "lrTrDhptITEPYMZCpu5yY",
+    "title": "test",
+    "description": "testaaaaaaa",
+    "category": "Benefits",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:11:19.246Z",
+    "updatedAt": "2026-03-12T08:11:19.246Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "Of8E2yC6yEsgn-fjjuiY1",
+    "title": "Too many meetings",
+    "description": "We have too many recurring meetings; it reduces focus time.",
+    "category": "Process",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:09:02.276Z",
+    "updatedAt": "2026-03-12T08:09:03.047Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "rbtEdJq7Dpld2auS8F2hM"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 32
+    }
+  },
+  {
+    "id": "rbtEdJq7Dpld2auS8F2hM",
+    "title": "Too many meetings",
+    "description": "We have too many recurring meetings; it reduces focus time.",
+    "category": "Process",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:08:50.489Z",
+    "updatedAt": "2026-03-12T08:08:51.182Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [],
+      "duplicateOfId": null,
+      "priorityScore": 32
+    }
+  }
+]

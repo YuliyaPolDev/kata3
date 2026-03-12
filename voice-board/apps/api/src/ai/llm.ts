@@ -11,10 +11,17 @@ export async function generateText(prompt: string): Promise<string | null> {
   if (!client) return null;
 
   const model = process.env.OPENAI_MODEL ?? 'gpt-4o-mini';
-  const resp = await client.responses.create({
-    model,
-    input: prompt
-  });
+  try {
+    const resp = await client.responses.create({
+      model,
+      input: prompt
+    });
 
-  return resp.output_text;
+    return resp.output_text;
+  } catch (err) {
+    // Non-fatal in MVP: app should still work without a valid key.
+    // eslint-disable-next-line no-console
+    console.warn('LLM call failed; continuing without AI output');
+    return null;
+  }
 }
