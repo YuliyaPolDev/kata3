@@ -1,5 +1,12 @@
 [
   { "id": "handbook", "title": "Employee Handbook", "file": "handbook.md" },
   { "id": "benefits", "title": "Benefits Policy", "file": "benefits.md" },
-  { "id": "coc", "title": "Code of Conduct", "file": "code-of-conduct.md" }
+  { "id": "coc", "title": "Code of Conduct", "file": "code-of-conduct.md" },
+  { "id": "remote-work", "title": "Remote Work Policy", "file": "remote-work.md" },
+  { "id": "expenses", "title": "Expense Policy", "file": "expenses.md" },
+  { "id": "it-security", "title": "IT Security Policy", "file": "it-security.md" },
+  { "id": "diversity", "title": "Diversity and Inclusion", "file": "diversity.md" },
+  { "id": "kitchen-coffee", "title": "Kitchen & Coffee Etiquette", "file": "kitchen-and-coffee.md" },
+  { "id": "hobbies-clubs", "title": "Hobbies & Employee Clubs", "file": "hobbies-and-clubs.md" },
+  { "id": "communication", "title": "Communication & Socializing", "file": "communication.md" }
 ]
