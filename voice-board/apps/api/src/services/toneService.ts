@@ -1,33 +1,38 @@
 import type { Concern } from '../models';
-import { generateText } from '../ai/llm';
+import { generateJson } from '../ai/llm';
+import { buildTopicAnalysisPrompt } from '../ai/prompts';
 
 export type ConcernClassification = {
-  tone: 'Calm' | 'Neutral' | 'Heated';
-  urgency: 'Low' | 'Medium' | 'High';
+  category: "HR" | "Legal" | "Benefits" | "Process" | "Other";
+  tone: string;
+  urgency: "Low" | "Medium" | "High";
   sentiment: number;
+  reasoning: string;
 };
 
 export async function classifyConcern(concern: Concern): Promise<ConcernClassification | null> {
-  const prompt = [
-    'Classify the following employee concern.',
-    'Return ONLY valid JSON with keys: tone (Calm|Neutral|Heated), urgency (Low|Medium|High), sentiment (-1..1).',
-    '',
-    `Title: ${concern.title}`,
-    `Description: ${concern.description}`
-  ].join('\n');
-
-  const text = await generateText(prompt);
-  if (!text) return null;
+  const prompt = buildTopicAnalysisPrompt(concern.title, concern.description);
 
   try {
-    const parsed = JSON.parse(text) as ConcernClassification;
-    if (typeof parsed.sentiment !== 'number') return null;
+    const aiAnalysis = await generateJson<{
+      category: "HR" | "Legal" | "Benefits" | "Process" | "Other";
+      tone: string;
+      urgency: "Low" | "Medium" | "High";
+      sentimentScore: number;
+      reasoning: string;
+    }>(prompt);
+
+    if (!aiAnalysis) return null;
+
     return {
-      tone: parsed.tone,
-      urgency: parsed.urgency,
-      sentiment: Math.max(-1, Math.min(1, parsed.sentiment))
+      category: aiAnalysis.category,
+      tone: aiAnalysis.tone,
+      urgency: aiAnalysis.urgency,
+      sentiment: aiAnalysis.sentimentScore,
+      reasoning: aiAnalysis.reasoning
     };
-  } catch {
+  } catch (err) {
+    console.error('Tone classification failed:', err);
     return null;
   }
 }

@@ -1,5 +1,73 @@
 [
-  { "id": "handbook", "title": "Employee Handbook", "file": "handbook.md" },
-  { "id": "benefits", "title": "Benefits Policy", "file": "benefits.md" },
-  { "id": "coc", "title": "Code of Conduct", "file": "code-of-conduct.md" }
+  {
+    "id": "HR-POL-001",
+    "title": "Sick Leave Policy",
+    "sourceType": "policy",
+    "version": "2.1",
+    "lastUpdated": "2025-01-15T00:00:00Z",
+    "tags": [
+      "sick leave",
+      "health",
+      "absence",
+      "medical"
+    ],
+    "content": "Employees are entitled to take paid sick leave when they are unable to work due to illness or injury. For absences up to 3 consecutive working days, no medical certificate is required. For absences exceeding 3 consecutive days, a valid doctor's note must be submitted to HR. Employees must notify their Resource Manager and Project Manager no later than 10:00 AM on the first day of absence. Up to 10 uncertified sick days are permitted per calendar year. Additional sick leave is processed according to local labor laws and may be paid at a reduced rate."
+  },
+  {
+    "id": "HR-POL-002",
+    "title": "Vacation and Paid Time Off (PTO)",
+    "sourceType": "policy",
+    "version": "3.0",
+    "lastUpdated": "2024-11-20T00:00:00Z",
+    "tags": [
+      "vacation",
+      "pto",
+      "time off",
+      "holidays"
+    ],
+    "content": "Employees accrue standard Paid Time Off (PTO) at a rate of 20 working days per year, with an additional 5 days granted after 3 years of continuous service. Vacation requests for 3 days or fewer should be submitted at least 1 week in advance. Requests for more than 3 days must be submitted at least 2 weeks in advance and require approval from both the Resource Manager and the current Project Manager. Employees may carry over a maximum of 5 unused vacation days into the next calendar year, which must be used by March 31st of that year."
+  },
+  {
+    "id": "HR-POL-003",
+    "title": "Promotion and Career Advancement Criteria",
+    "sourceType": "guideline",
+    "version": "1.5",
+    "lastUpdated": "2025-02-01T00:00:00Z",
+    "tags": [
+      "promotion",
+      "career",
+      "assessment",
+      "level up"
+    ],
+    "content": "Promotions are merit-based and evaluated during bi-annual Assessment Center cycles (typically in Q2 and Q4). To be eligible for a promotion, an employee must: 1) Have spent at least 12 months in their current role. 2) Consistently exceed expectations in their current title. 3) Demonstrate the core competencies and skills of the target level for a minimum of 6 months. Candidates must be nominated by their Resource Manager and pass a technical and behavioral review panel. Exceptional performance may warrant out-of-cycle promotions subject to Unit Head approval."
+  },
+  {
+    "id": "HR-POL-004",
+    "title": "Code of Workplace Conduct",
+    "sourceType": "handbook",
+    "version": "4.2",
+    "lastUpdated": "2024-08-10T00:00:00Z",
+    "tags": [
+      "conduct",
+      "harassment",
+      "dress code",
+      "professionalism"
+    ],
+    "content": "The company is committed to a safe, inclusive, and professional work environment. We maintain a zero-tolerance policy towards harassment, discrimination, and bullying of any kind. Employees are expected to treat colleagues, clients, and partners with respect. The standard office dress code is 'smart casual', though specific client engagements may require business attire. A clean-desk policy is enforced to protect confidential client and company information; all sensitive documents and laptops must be secured when stepping away from the workspace."
+  },
+  {
+    "id": "HR-POL-005",
+    "title": "Flexible and Remote Work Policy",
+    "sourceType": "policy",
+    "version": "2.4",
+    "lastUpdated": "2025-03-01T00:00:00Z",
+    "tags": [
+      "remote work",
+      "work from home",
+      "wfh",
+      "flexible hours",
+      "hybrid"
+    ],
+    "content": "We support a hybrid work model to balance flexibility with team collaboration. By default, employees are expected to work from the office 2 to 3 days per week. Fully remote work arrangements are available but require explicit approval from the Resource Manager and must align with client project security requirements. Core collaboration hours are between 10:00 AM and 4:00 PM local time, during which employees must be online and available for meetings. The company provides a standard IT equipment package for home offices, but home internet costs are the responsibility of the employee."
+  }
 ]
