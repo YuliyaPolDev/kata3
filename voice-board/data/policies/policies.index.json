@@ -1,0 +1,5 @@
+[
+  { "id": "handbook", "title": "Employee Handbook", "file": "handbook.md" },
+  { "id": "benefits", "title": "Benefits Policy", "file": "benefits.md" },
+  { "id": "coc", "title": "Code of Conduct", "file": "code-of-conduct.md" }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "voice-board",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev -w @voice-board/api",
+    "dev:web": "npm run dev -w @voice-board/web",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev:api\" \"npm run dev:web\"",
+    "build": "npm run build -w @voice-board/api && npm run build -w @voice-board/web",
+    "typecheck": "npm run typecheck -w @voice-board/api && npm run typecheck -w @voice-board/web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "typescript": "^5.6.3"
+  }
+}
