@@ -6,12 +6,14 @@ import path from 'path';
 import { clustersRouter } from './routes/clusters';
 import { concernsRouter } from './routes/concerns';
 import { hrRouter } from './routes/hr';
+import { roleMiddleware } from './utils/role';
 
 dotenv.config({ path: path.resolve(process.cwd(), '../../.env') });
 
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: '1mb' }));
+app.use(roleMiddleware);
 
 app.get('/healthz', (_req, res) => {
   res.json({ ok: true });

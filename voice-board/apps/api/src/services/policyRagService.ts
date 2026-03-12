@@ -35,7 +35,9 @@ function scoreByKeywordOverlap(question: string, chunk: string): number {
   return overlap;
 }
 
-export async function answerHrQuestion(question: string): Promise<PolicyAnswer> {
+export type PolicyExcerpt = { docTitle: string; excerpt: string; score: number };
+
+export async function retrievePolicyExcerpts(query: string, limit = 3): Promise<PolicyExcerpt[]> {
   const docs = await loadPolicyIndex();
   const chunks: Array<{ docTitle: string; text: string; score: number }> = [];
 
@@ -45,19 +47,19 @@ export async function answerHrQuestion(question: string): Promise<PolicyAnswer> 
     const parts = raw.split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
 
     for (const p of parts) {
-      const score = scoreByKeywordOverlap(question, p);
+      const score = scoreByKeywordOverlap(query, p);
       if (score > 0) chunks.push({ docTitle: doc.title, text: p, score });
     }
   }
 
   chunks.sort((a, b) => b.score - a.score);
-  const top = chunks.slice(0, 5);
+  return chunks.slice(0, limit).map((t) => ({ docTitle: t.docTitle, excerpt: t.text.slice(0, 500), score: t.score }));
+}
 
-  const sources = top.map((t) => ({ docTitle: t.docTitle, excerpt: t.text.slice(0, 500) }));
-
-  const context = top
-    .map((t, idx) => `SOURCE ${idx + 1} (${t.docTitle}):\n${t.text}`)
-    .join('\n\n');
+export async function answerHrQuestion(question: string): Promise<PolicyAnswer> {
+  const top = await retrievePolicyExcerpts(question, 5);
+  const sources = top.map((t) => ({ docTitle: t.docTitle, excerpt: t.excerpt }));
+  const context = top.map((t, idx) => `SOURCE ${idx + 1} (${t.docTitle}):\n${t.excerpt}`).join('\n\n');
 
   const prompt = [
     'You are an HR assistant. Answer using ONLY the provided SOURCES.',

@@ -6,6 +6,14 @@ Employees can submit concerns, vote + comment, see trending clusters, and ask HR
 
 This is intentionally **not** production architecture (no auth/SSO, no notifications, no real DB, no vector DB).
 
+## Roles (MVP / demo)
+- The UI has a simple role selector (Employee / Council) stored in `localStorage`.
+- The web client sends the role to the API via the `X-Voice-Role` request header.
+- Council-only capabilities:
+	- Updating lifecycle state (`PATCH /api/concerns/:id/state`)
+	- Viewing AI-derived fields (tone/urgency/sentiment/priority)
+- This is **not secure** (users could spoof headers). It’s only to demonstrate role-gated UX in the MVP.
+
 ## What this MVP demonstrates
 - Submit a concern (title/description/category)
 - Live duplicate detection (simple cosine similarity over tokens)
