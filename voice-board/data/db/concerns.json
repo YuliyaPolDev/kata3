@@ -1,5 +1,44 @@
 [
   {
+    "id": "v89wheCbjFHDTHkD7tAHC",
+    "title": "Overtime policy clarity",
+    "description": "I am confused about overtime eligibility and approval steps. Please clarify.",
+    "category": "Process",
+    "state": "Resolved",
+    "createdAt": "2026-03-12T08:54:02.017Z",
+    "updatedAt": "2026-03-12T08:54:02.612Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "CRn71RSfl92Nhh72Rrvoy",
+        "8ncBf-uTrtMr8Bq3xfFDU",
+        "0S1G2ip1gs0Y4jnMtenDY"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 32
+    }
+  },
+  {
+    "id": "CRn71RSfl92Nhh72Rrvoy",
+    "title": "Overtime policy clarity",
+    "description": "I am confused about overtime eligibility and approval steps. Please clarify.",
+    "category": "Process",
+    "state": "Planned",
+    "createdAt": "2026-03-12T08:53:52.584Z",
+    "updatedAt": "2026-03-12T08:55:28.022Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "8ncBf-uTrtMr8Bq3xfFDU",
+        "0S1G2ip1gs0Y4jnMtenDY"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 32
+    }
+  },
+  {
     "id": "_eJUlsG5TVKbsCKJQWdth",
     "title": "too many harrassment",
     "description": "too many harrassment",
