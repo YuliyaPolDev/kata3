@@ -67,6 +67,10 @@ npm run dev
 	- if set: the API will use the LLM for tone/urgency/sentiment + cluster themes/title + HR answers
 	- if not set: the app still works (HR endpoint returns relevant excerpts, and concern classification is skipped)
 
+Optional dev/test switches:
+- `AI_MODE=mock` — no network calls; returns deterministic mock text for AI features (useful for UI testing)
+- `AI_MODE=off` — disables all LLM calls (same behavior as missing/invalid key)
+
 Optional:
 - `OPENAI_MODEL` (default: `gpt-4o-mini`)
 

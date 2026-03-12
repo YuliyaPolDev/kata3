@@ -39,7 +39,7 @@ export function ClustersScreen() {
             )}
           </div>
         ))}
-        {clusters.length === 0 ? <div style={{ color: '#555' }}>No clusters yet (need 5+ similar concerns in 30 days).</div> : null}
+        {clusters.length === 0 ? <div style={{ color: '#555' }}>No clusters yet (need 4+ similar concerns in 30 days).</div> : null}
       </div>
     </div>
   );

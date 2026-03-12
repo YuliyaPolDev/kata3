@@ -1,13 +1,168 @@
 [
   {
+    "id": "gwA1eUMgOiAFJmEA9n9qq",
+    "title": "coffee machine",
+    "description": "coffee machine",
+    "category": "HR",
+    "state": "Open",
+    "createdAt": "2026-03-12T10:05:46.722Z",
+    "updatedAt": "2026-03-12T10:07:59.464Z",
+    "voteCount": 1,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "J1qqS4vDyhsCDxDBCT8Vj",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Created from split of xI5_X4zCpEb9jIqW8S9YY",
+        "at": "2026-03-12T10:05:46.722Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": "xI5_X4zCpEb9jIqW8S9YY",
+    "declinedReason": null,
+    "ai": {
+      "duplicateOfId": null,
+      "similarIds": [],
+      "priorityScore": 32
+    }
+  },
+  {
+    "id": "bLPeFgyZ9zi1NNf7r-7jY",
+    "title": "issue aaaaaaaaaaa",
+    "description": "issueaaaaaaa",
+    "category": "HR",
+    "state": "Open",
+    "createdAt": "2026-03-12T10:05:46.722Z",
+    "updatedAt": "2026-03-12T10:08:09.714Z",
+    "voteCount": 11,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "_ogkhPTienp9jS6yikRVb",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Created from split of xI5_X4zCpEb9jIqW8S9YY",
+        "at": "2026-03-12T10:05:46.722Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": "xI5_X4zCpEb9jIqW8S9YY",
+    "declinedReason": null,
+    "ai": {
+      "duplicateOfId": null,
+      "similarIds": [],
+      "priorityScore": 55
+    }
+  },
+  {
+    "id": "6V27i7jnSB0z1vp2fo4E1",
+    "title": "Printers are not working",
+    "description": "Printers are not working Urgent",
+    "category": "Process",
+    "state": "Escalated",
+    "createdAt": "2026-03-12T10:03:34.570Z",
+    "updatedAt": "2026-03-12T10:04:32.794Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "Dp4pCsVk59AWOYGhNWpEn",
+        "from": "UnderReview",
+        "to": "Escalated",
+        "by": {
+          "type": "council"
+        },
+        "note": "explanations",
+        "at": "2026-03-12T10:04:32.794Z"
+      },
+      {
+        "id": "oI-VuWiVagbMsuIDR1SWZ",
+        "from": "Open",
+        "to": "UnderReview",
+        "by": {
+          "type": "council"
+        },
+        "at": "2026-03-12T10:04:19.488Z"
+      },
+      {
+        "id": "fM0Hm5u5Jf2LzCiG1sfnc",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Auto-opened for voting",
+        "at": "2026-03-12T10:03:34.570Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null,
+    "ai": {
+      "similarIds": [
+        "YDGkWPJGTGZwbGrSJ0cAH",
+        "6OO1YMqEsDS8Fll3V5Bih",
+        "3yXOF2MBSa2DXkLr-JK3Y",
+        "MiBgs84B32zW8G-NNr1s7",
+        "-9Tz0H99VxRl-dp_d7VCg"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "cZ3DArz4mn-7idWy5hb4-",
+    "title": "parking space is limited URGENT",
+    "description": "parking space is limited URGENT",
+    "category": "Other",
+    "state": "Open",
+    "createdAt": "2026-03-12T09:34:01.842Z",
+    "updatedAt": "2026-03-12T10:08:12.260Z",
+    "voteCount": 4,
+    "followerCount": 0,
+    "lifecycle": [
+      {
+        "id": "4-YK9GpsvM_YhcA9hU-FU",
+        "from": "Submitted",
+        "to": "Open",
+        "by": {
+          "type": "system"
+        },
+        "note": "Auto-opened for voting",
+        "at": "2026-03-12T09:34:01.842Z"
+      }
+    ],
+    "mergedIntoId": null,
+    "splitFromId": null,
+    "declinedReason": null,
+    "ai": {
+      "similarIds": [
+        "YDGkWPJGTGZwbGrSJ0cAH",
+        "6OO1YMqEsDS8Fll3V5Bih",
+        "3yXOF2MBSa2DXkLr-JK3Y",
+        "MiBgs84B32zW8G-NNr1s7",
+        "-9Tz0H99VxRl-dp_d7VCg"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 39
+    }
+  },
+  {
     "id": "dU02o3Yck0XaLLVZjK8h2",
     "title": "I need coffee",
     "description": "I need coffee",
     "category": "Other",
     "state": "Open",
     "createdAt": "2026-03-12T09:16:11.432Z",
-    "updatedAt": "2026-03-12T09:16:11.432Z",
-    "voteCount": 0,
+    "updatedAt": "2026-03-12T10:08:17.078Z",
+    "voteCount": 4,
     "followerCount": 0,
     "lifecycle": [
       {
@@ -27,7 +182,7 @@
     "ai": {
       "duplicateOfId": null,
       "similarIds": [],
-      "priorityScore": 30
+      "priorityScore": 39
     }
   },
   {
@@ -782,9 +937,9 @@
     "title": "coffee machine issue",
     "description": "coffee machine issue",
     "category": "HR",
-    "state": "Open",
+    "state": "Split",
     "createdAt": "2026-03-12T08:12:11.065Z",
-    "updatedAt": "2026-03-12T08:12:11.065Z",
+    "updatedAt": "2026-03-12T10:05:46.722Z",
     "voteCount": 0,
     "followerCount": 0,
     "ai": {
@@ -795,6 +950,25 @@
       "priorityScore": 30
     },
     "lifecycle": [
+      {
+        "id": "-EqqpM7DakD1Rxadmzvdo",
+        "from": "Split",
+        "to": "Split",
+        "by": {
+          "type": "council"
+        },
+        "note": "Split into gwA1eUMgOiAFJmEA9n9qq and bLPeFgyZ9zi1NNf7r-7jY. Redistributed 0 vote record(s) (0/0).",
+        "at": "2026-03-12T10:05:46.722Z"
+      },
+      {
+        "id": "Ft00bCxGgpl4gAMUT-vG3",
+        "from": "Open",
+        "to": "Split",
+        "by": {
+          "type": "council"
+        },
+        "at": "2026-03-12T10:05:32.711Z"
+      },
       {
         "id": "FJC7bOG4cJMotw2LfmbOh",
         "from": "Submitted",
@@ -808,7 +982,11 @@
     ],
     "mergedIntoId": null,
     "splitFromId": null,
-    "declinedReason": null
+    "declinedReason": null,
+    "splitIntoIds": [
+      "gwA1eUMgOiAFJmEA9n9qq",
+      "bLPeFgyZ9zi1NNf7r-7jY"
+    ]
   },
   {
     "id": "P4ytyI3a2-HbI2IDlRCSa",
