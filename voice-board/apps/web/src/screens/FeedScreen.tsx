@@ -56,7 +56,7 @@ export function FeedScreen() {
                 <span style={{ whiteSpace: 'nowrap' }}>⬆ {c.voteCount}</span>
               </div>
               <div style={{ color: '#555', fontSize: 13, marginTop: 4 }}>
-                {c.category} · {c.state} · Priority {c.ai.priorityScore ?? 0}
+                {c.category} · {c.state}
               </div>
             </button>
           ))}
@@ -108,7 +108,7 @@ function ConcernDetail(props: { concern: Concern; onUpvote: () => Promise<void>;
       <div style={{ marginTop: 8, whiteSpace: 'pre-wrap' }}>{concern.description}</div>
 
       <div style={{ marginTop: 12, color: '#555', fontSize: 13 }}>
-        Tone: {concern.ai.tone ?? '—'} · Urgency: {concern.ai.urgency ?? '—'} · Sentiment: {concern.ai.sentiment ?? '—'}
+        Category: {concern.category} · State: {concern.state}
       </div>
 
       <div style={{ marginTop: 16 }}>

@@ -7,11 +7,12 @@ import { findSimilarConcerns } from './duplicateService';
 import { computePriorityScore } from './priorityService';
 import { classifyConcern } from './toneService';
 import { updateTrendingClustersForConcern } from './clusterService';
+import { suggestCategory } from './categoryService';
 
 type CreateConcernInput = {
   title: string;
   description: string;
-  category: ConcernCategory;
+  category?: ConcernCategory;
 };
 
 export async function listConcerns(): Promise<Concern[]> {
@@ -34,11 +35,13 @@ export async function createConcern(input: CreateConcernInput): Promise<Concern>
 
   const similar = findSimilarConcerns(concerns, input.title, input.description, 5);
 
+  const decidedCategory = input.category ?? (await suggestCategory(input.title, input.description));
+
   const concern: Concern = {
     id: nanoid(),
     title: input.title,
     description: input.description,
-    category: input.category,
+    category: decidedCategory,
     state: 'Open',
     createdAt: now,
     updatedAt: now,

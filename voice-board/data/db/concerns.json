@@ -1,12 +1,92 @@
 [
   {
+    "id": "_eJUlsG5TVKbsCKJQWdth",
+    "title": "too many harrassment",
+    "description": "too many harrassment",
+    "category": "Other",
+    "state": "Resolved",
+    "createdAt": "2026-03-12T08:44:49.079Z",
+    "updatedAt": "2026-03-12T08:50:00.073Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "Of8E2yC6yEsgn-fjjuiY1",
+        "rbtEdJq7Dpld2auS8F2hM"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "U4NI7FkCsAx9c9Uis3Ceo",
+    "title": "I need coffee now URGENT",
+    "description": "I need coffee now URGENT",
+    "category": "Other",
+    "state": "Open",
+    "createdAt": "2026-03-12T08:44:14.093Z",
+    "updatedAt": "2026-03-12T08:44:14.093Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "P4ytyI3a2-HbI2IDlRCSa",
+        "Rmf0eFbvKtSMwlu9Ca44g",
+        "xI5_X4zCpEb9jIqW8S9YY",
+        "gxzhBKODerPLh0GzVaPXq",
+        "xh5UbtiGM4qR0060UHGMN"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "8ncBf-uTrtMr8Bq3xfFDU",
+    "title": "Overtime policy question",
+    "description": "Do we have overtime eligibility rules and how are updates communicated?",
+    "category": "Process",
+    "state": "Resolved",
+    "createdAt": "2026-03-12T08:27:59.627Z",
+    "updatedAt": "2026-03-12T08:33:17.371Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "0S1G2ip1gs0Y4jnMtenDY",
+        "Of8E2yC6yEsgn-fjjuiY1",
+        "rbtEdJq7Dpld2auS8F2hM"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
+    "id": "0S1G2ip1gs0Y4jnMtenDY",
+    "title": "Overtime policy question",
+    "description": "Do we have overtime eligibility rules and how are updates communicated?",
+    "category": "Process",
+    "state": "Resolved",
+    "createdAt": "2026-03-12T08:27:51.354Z",
+    "updatedAt": "2026-03-12T08:34:19.942Z",
+    "voteCount": 0,
+    "followerCount": 0,
+    "ai": {
+      "similarIds": [
+        "Of8E2yC6yEsgn-fjjuiY1",
+        "rbtEdJq7Dpld2auS8F2hM"
+      ],
+      "duplicateOfId": null,
+      "priorityScore": 30
+    }
+  },
+  {
     "id": "gxzhBKODerPLh0GzVaPXq",
     "title": "no coffee at the office",
     "description": "no coffee at the office",
     "category": "HR",
-    "state": "Open",
+    "state": "Resolved",
     "createdAt": "2026-03-12T08:12:56.235Z",
-    "updatedAt": "2026-03-12T08:12:56.235Z",
+    "updatedAt": "2026-03-12T08:37:32.277Z",
     "voteCount": 0,
     "followerCount": 0,
     "ai": {

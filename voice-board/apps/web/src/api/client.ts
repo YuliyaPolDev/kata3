@@ -22,6 +22,13 @@ export type Concern = {
 };
 
 export type SimilarConcern = { id: string; title: string; score: number; state: ConcernState };
+export type PolicyExcerpt = { docTitle: string; excerpt: string; score: number };
+export type PrecheckResult = {
+  openTopics: SimilarConcern[];
+  resolvedTopics: SimilarConcern[];
+  policyExcerpts: PolicyExcerpt[];
+  suggestedCategory: ConcernCategory;
+};
 export type Cluster = {
   id: string;
   title: string;
@@ -36,10 +43,20 @@ export type Cluster = {
 export type Comment = { id: string; concernId: string; text: string; createdAt: string };
 
 async function http<T>(input: RequestInfo, init?: RequestInit): Promise<T> {
+  const role = (() => {
+    try {
+      const v = localStorage.getItem('voiceBoardRole');
+      return v === 'council' ? 'council' : 'employee';
+    } catch {
+      return 'employee';
+    }
+  })();
+
   const res = await fetch(input, {
     ...init,
     headers: {
       'Content-Type': 'application/json',
+      'X-Voice-Role': role,
       ...(init?.headers ?? {})
     }
   });
@@ -58,11 +75,17 @@ export const api = {
   getConcern(id: string): Promise<Concern> {
     return http(`/api/concerns/${id}`);
   },
+  setConcernState(id: string, state: ConcernState): Promise<Concern> {
+    return http(`/api/concerns/${id}/state`, { method: 'PATCH', body: JSON.stringify({ state }) });
+  },
   findSimilar(title: string, description: string): Promise<SimilarConcern[]> {
     const qs = new URLSearchParams({ title, description });
     return http(`/api/concerns/similar?${qs.toString()}`);
   },
-  createConcern(input: { title: string; description: string; category: ConcernCategory }): Promise<Concern> {
+  precheck(input: { title: string; description: string }): Promise<PrecheckResult> {
+    return http('/api/concerns/precheck', { method: 'POST', body: JSON.stringify(input) });
+  },
+  createConcern(input: { title: string; description: string; category?: ConcernCategory }): Promise<Concern> {
     return http('/api/concerns', { method: 'POST', body: JSON.stringify(input) });
   },
   upvote(id: string): Promise<{ concern: Concern }> {
